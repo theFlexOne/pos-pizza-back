@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
 
   create_table "customers", force: :cascade do |t|
     t.string "fname"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 1) do
     t.string "city"
     t.string "state"
     t.integer "order_history"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "order_history", force: :cascade do |t|
+    t.integer "customer_id"
+    t.float "ammount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
