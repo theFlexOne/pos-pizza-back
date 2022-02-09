@@ -32,6 +32,7 @@ gem "require_all"
 
 # These gems will only be used when we are running the application locally
 group :development do
+  gem 'faker', '~> 2.19'
   gem "pry"
 end
 
