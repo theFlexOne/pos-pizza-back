@@ -1,4 +1,7 @@
 class Topping < ActiveRecord::Base
-  has_many :recipes
-  has_many :pizzas, through: :recipes
+  belongs_to :ingredient
+  belongs_to :pizza
+
+  # has_many :recipes
+  # has_many :pizzas, through: :recipes
 end
